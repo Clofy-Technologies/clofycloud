@@ -43,15 +43,15 @@ const Footer = () => {
               <li><a href="#" className="hover:text-blue-400 transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-blue-400 transition-colors">Services</a></li>
               <li><a href="#pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li>
-              
+              <li><a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/Terms of Use_Clofy Cloud.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
-              <li><a href="/Privacy Policy_Clofy Cloud.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
         </div>

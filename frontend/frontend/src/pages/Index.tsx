@@ -7,7 +7,7 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import ServicesSection from '@/components/ServicesSection';
 import PricingSection from '@/components/PricingSection';
 import SolutionGenerator from '@/components/SolutionGenerator';
-import ResourcesSection from '@/components/FAQ';
+import ResourcesSection from '@/components/ResourcesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 

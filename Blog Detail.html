@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clofy Cloud - Blog Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Clofy Cloud</div>
+      <nav class="space-x-4">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/pricing" class="hover:underline">Pricing</a>
+        <a href="/blog" class="hover:underline font-semibold">Blog</a>
+        <a href="/login" class="px-4 py-2 border border-indigo-600 rounded hover:bg-indigo-50">Log In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb / Navigation -->
+  <nav class="container mx-auto px-4 py-3 text-sm text-gray-600">
+    <a href="/blog" class="hover:underline">Blog</a> &rsaquo; <span>AI in Cloud: What’s Next in 2025?</span>
+  </nav>
+
+  <!-- Article Detail -->
+  <main class="container mx-auto px-4 py-8 max-w-3xl bg-white rounded-lg shadow">
+    <!-- Title & Meta -->
+    <header class="mb-6">
+      <h1 class="text-4xl font-bold mb-2">AI in Cloud: What’s Next in 2025?</h1>
+      <div class="text-gray-500 text-sm">
+        <span>June 18, 2025</span> &bull; <span>News</span>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    <figure class="mb-6">
+      <img src="https://via.placeholder.com/800x400" alt="Featured image" class="w-full rounded">
+      <figcaption class="text-center text-sm text-gray-500 mt-2">Image alt text or caption</figcaption>
+    </figure>
+
+    <!-- Article Content -->
+    <article class="prose prose-indigo max-w-none">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Proin vel arcu tellus. Donec aliquam, tortor nec facilisis sollicitudin, justo nunc fermentum ex, vitae dignissim erat orci quis sem.</p>
+      <h2>Emerging Trends</h2>
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer sit amet odio vel urna consequat sollicitudin.</p>
+      <h3>AI-Driven Automation</h3>
+      <p>Nam facilisis lacus vel libero aliquet, sed convallis massa dapibus. Suspendisse potenti.</p>
+      <ul>
+        <li>Automated resource provisioning</li>
+        <li>Cost optimization algorithms</li>
+        <li>Predictive scaling strategies</li>
+      </ul>
+      <p>Consectetur adipiscing elit. Curabitur volutpat consequat nisl, at aliquet nisi gravida a.</p>
+    </article>
+
+    <!-- Tags & Share -->
+    <footer class="mt-8 border-t pt-6 flex justify-between items-center">
+      <div class="space-x-2">
+        <span class="text-sm font-medium text-gray-600">Tags:</span>
+        <a href="/blog?tag=AI" class="text-indigo-600 hover:underline">AI</a>
+        <a href="/blog?tag=Cloud" class="text-indigo-600 hover:underline">Cloud</a>
+      </div>
+      <div class="space-x-2">
+        <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100">Share</button>
+        <button class="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100">Print</button>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

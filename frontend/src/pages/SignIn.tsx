@@ -13,30 +13,31 @@ const SignIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Simulate authentication
-    setTimeout(() => {
-      setIsLoading(false);
-      // Simulate successful login and redirect to User Management page
-      navigate('/user-management'); 
-    }, 1500);
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Simulate authentication
-    setTimeout(() => {
-      console.log('Sign in attempted with:', { email, password });
+
+    try {
+      const response = await fetch('http://localhost:8000/api/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        // Assuming successful login, redirect to User Management page
+        navigate('/user-management');
+      } else {
+        // Handle login errors, e.g., show a message to the user
+        console.error('Login failed');
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+    } finally {
       setIsLoading(false);
-      // For now, just navigate to home
-      navigate('/');
-    }, 1000);
->>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
+    }
   };
 
   return (

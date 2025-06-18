@@ -8,12 +8,15 @@ import Index from "./pages/Index";
 import SolutionGenerator from "./pages/SolutionGenerator";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+<<<<<<< HEAD
 import UserManagement from "./pages/UserManagement";
 import ProfileSection from './components/ProfileSection';
 import SubscriptionSection from './components/SubscriptionSection';
 import SavedSolutionsSection from './components/SavedSolutionsSection';
 import UpgradeSection from './components/UpgradeSection';
 import SupportSection from './components/SupportSection';
+=======
+>>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +32,7 @@ const App = () => (
           <Route path="/solution-generator" element={<SolutionGenerator />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+<<<<<<< HEAD
           <Route path="/user-management" element={<UserManagement />}>
             <Route index element={<ProfileSection />} />
             <Route path="profile" element={<ProfileSection />} />
@@ -37,6 +41,9 @@ const App = () => (
             <Route path="upgrade" element={<UpgradeSection />} />
             <Route path="support" element={<SupportSection />} />
           </Route>
+=======
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+>>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

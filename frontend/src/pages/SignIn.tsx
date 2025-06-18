@@ -13,6 +13,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -23,6 +24,19 @@ const SignIn = () => {
       // Simulate successful login and redirect to User Management page
       navigate('/user-management'); 
     }, 1500);
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    
+    // Simulate authentication
+    setTimeout(() => {
+      console.log('Sign in attempted with:', { email, password });
+      setIsLoading(false);
+      // For now, just navigate to home
+      navigate('/');
+    }, 1000);
+>>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
   };
 
   return (

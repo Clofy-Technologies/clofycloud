@@ -16,11 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-<<<<<<< HEAD
     --primary: 221 83% 53%; /* Updated to match the blue theme */
-=======
-    --primary: 222.2 47.4% 11.2%;
->>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -68,13 +64,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-<<<<<<< HEAD
     --primary: 221 83% 53%; /* Update to match the blue theme */
     --primary-foreground: 210 40% 98%;
-=======
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
->>>>>>> 86263964ac7cfc481f55d2b9effc4dc3ce62c15c
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;

@@ -8,21 +8,21 @@ const AdminPanel: React.FC = () => {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-white border-r p-4 flex flex-col">
-        <div className="text-2xl font-bold text-indigo-600 mb-8">Admin Panel</div>
+        <div className="text-2xl font-bold text-primary mb-8">Admin Panel</div>
         <nav className="flex-1">
           <ul className="space-y-4">
             <li>
               <button
                 onClick={() => setActiveSection('users')}
-                className={`block px-3 py-2 rounded w-full text-left ${activeSection === 'users' ? 'bg-indigo-100 text-indigo-800' : 'hover:bg-indigo-50'}`}
-              >
+                className={`block px-3 py-2 rounded w-full text-left ${activeSection === 'users' ? 'bg-primary text-primary-foreground font-medium' : 'hover:bg-accent hover:text-accent-foreground'}`}
+              > 
                 User Management
               </button>
             </li>
             <li>
               <button
                 onClick={() => setActiveSection('posts')}
-                className={`block px-3 py-2 rounded w-full text-left ${activeSection === 'posts' ? 'bg-indigo-100 text-indigo-800' : 'hover:bg-indigo-50'}`}
+                className={`block px-3 py-2 rounded w-full text-left ${activeSection === 'posts' ? 'bg-primary text-primary-foreground font-medium' : 'hover:bg-accent hover:text-accent-foreground'}`}
               >
                 Blog Management
               </button>
@@ -55,7 +55,7 @@ const AdminPanel: React.FC = () => {
                   <td className="px-4 py-2">Acme Corp</td>
                   <td className="px-4 py-2">User</td>
                   <td className="px-4 py-2 space-x-2">
-                    <button className="px-3 py-1 bg-indigo-600 text-white rounded">Edit</button>
+                    <button className="px-3 py-1 bg-blue-600 text-white rounded">Edit</button>
                     <button className="px-3 py-1 bg-red-600 text-white rounded">Delete</button>
                   </td>
                 </tr>
@@ -71,7 +71,7 @@ const AdminPanel: React.FC = () => {
             <section id="posts" className="mb-12">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-semibold">Blog Posts</h2>
-                <button onClick={() => window.location.href = '#post-form'} className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">New Post</button>
+                <button onClick={() => window.location.href = '#post-form'} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">New Post</button>
               </div>
               <table className="w-full bg-white rounded shadow">
                 <thead className="bg-gray-200">
@@ -88,7 +88,7 @@ const AdminPanel: React.FC = () => {
                     <td className="px-4 py-2">AI in Cloud 2025</td>
                     <td className="px-4 py-2">Jun 18, 2025</td>
                     <td className="px-4 py-2 space-x-2">
-                      <button className="px-3 py-1 bg-indigo-600 text-white rounded">Edit</button>
+                      <button className="px-3 py-1 bg-blue-600 text-white rounded">Edit</button>
                       <button className="px-3 py-1 bg-red-600 text-white rounded">Delete</button>
                     </td>
                   </tr>
@@ -102,8 +102,8 @@ const AdminPanel: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-4">New / Edit Blog Post</h2>
               <form className="space-y-6">
                 <div>
-                  <label className="block mb-1 font-medium">Image URL</label>
-                  <input type="text" className="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter image URL" />
+                  <label className="block mb-1 font-medium">Image</label>
+                  <input type="text" className="w-full border border-gray-300 rounded px-3 py-2" placeholder="Upload Image" />
                 </div>
                 <div>
                   <label className="block mb-1 font-medium">Title</label>
@@ -113,7 +113,7 @@ const AdminPanel: React.FC = () => {
                   <label className="block mb-1 font-medium">Body</label>
                   <textarea className="w-full border border-gray-300 rounded px-3 py-2 h-40" placeholder="Write your article here..."></textarea>
                 </div>
-                <button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Save Post</button>
+                <button type="submit" className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Save Post</button>
               </form>
             </section>
           </>

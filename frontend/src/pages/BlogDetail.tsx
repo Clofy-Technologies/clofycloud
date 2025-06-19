@@ -14,7 +14,7 @@ const BlogDetail = () => {
     date: 'October 26, 2023',
     author: 'Clofy Tech Team',
     content: `This is the detailed content for blog post number ${id}. It covers various aspects of cloud solutions and technology. In a real application, this content would be dynamically loaded from a database or API. The goal of this page is to provide comprehensive information about a specific topic, offering insights and value to the reader. You can expand on this content with more rich text, images, and other multimedia elements to make it engaging and informative.`,
-    image: 'https://via.placeholder.com/800x400?text=Blog+Post+Image',
+    image: '/OIP (34).jpeg',
   };
 
   if (!blogPost.id) {

@@ -15,30 +15,32 @@ const SignIn = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-    // Dummy credentials for frontend-only authentication
-    const dummyEmail = 'test@example.com';
-    const dummyPassword = 'password123';
-
-    // Simulate a small delay to mimic network latency (optional)
-    await new Promise(resolve => setTimeout(resolve, 500));
-
-    if (email === dummyEmail && password === dummyPassword) {
-      // Authentication successful with dummy data
-      console.log('Frontend authentication successful');
-      navigate('/user-management');
-    } else {
-      // Authentication failed with dummy data
-      console.error('Frontend authentication failed: Invalid credentials');
-      alert('Invalid email or password'); // Provide user feedback
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('userRole', data.role);
+        navigate('/admin-panel');
+      } else {
+        const errorData = await response.json();
+        console.error(errorData.message || 'Sign-in failed');
+      }
+    } catch (error) {
+      console.error('An error occurred. Please try again.');
     }
 
-    setIsLoading(false);
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
       {/* Left: Form */}
       <div className="flex flex-col justify-center items-center w-full md:w-1/2 bg-white">
         <div className="w-full max-w-md p-8">
